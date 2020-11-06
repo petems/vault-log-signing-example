@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+
+  vault0:
+    hostname: vault0
+    image: vault:1.5.5
+    environment:
+      VAULT_DEV_ROOT_TOKEN_ID: ROOT
+    ports:
+      - 8200:8200
+    cap_add:
+      - IPC_LOCK
